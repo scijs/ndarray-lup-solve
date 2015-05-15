@@ -24,11 +24,12 @@ lup(A, A, P)
 lupSolve( A, A, P, b)
 
 // b now contains the answer x: [2,5,4,3]
+// A and P are unchanged and can be re-used
 ```
 
 ## Usage
 
-#### `require('ndarray-lup-solve')( L, U, P, b [, work] )
+#### `require('ndarray-lup-solve')( L, U, P, b [, work] )`
 
 - `L`: The n x n ndarray lower-triangular portion of the LUP factorization. The diagonal entries are implicitly assumed to be 1.
 - `U`: The n x n ndarray upper-triangular portion of the LUP factorization.
@@ -39,8 +40,5 @@ lupSolve( A, A, P, b)
 Returns `true` on successful completion; `false` otherwise.
 
 
-
-
 ## Credits
 (c) 2015 Ricky Reusser. MIT License
-
