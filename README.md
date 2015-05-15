@@ -21,7 +21,7 @@ var b = ndarray([13,38,102,107])
 
 // In-place LUP factorization:
 lup(A, A, P)
-lupSolve( A, A, P, b)
+solve( A, A, P, b)
 
 // b now contains the answer x: [2,5,4,3]
 // A and P are unchanged and can be re-used
