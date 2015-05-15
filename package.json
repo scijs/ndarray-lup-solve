@@ -1,6 +1,6 @@
 {
   "name": "ndarray-lup-solve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Solve ndarray Ax=b via LU factorization with pivoting",
   "main": "lib/index.js",
   "scripts": {
