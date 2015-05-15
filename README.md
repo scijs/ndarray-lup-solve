@@ -6,7 +6,7 @@ Solve ndarray Ax=b via LU factorization with pivoting
 
 ## Introduction
 
-Given an LUP factorization, this module solves for x in Ax = b. More precisely, it solves for x in LUx = Pb.
+Given an [LUP factorization](https://www.npmjs.com/package/ndarray-lup-factorization), this module solves for x in Ax = b. More precisely, it solves for x in LUx = Pb.
 
 ## Example
 
