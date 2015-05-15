@@ -31,13 +31,17 @@ solve( A, A, P, b)
 
 #### `require('ndarray-lup-solve')( L, U, P, b [, work] )`
 
-- `L`: The n x n ndarray lower-triangular portion of the LUP factorization. The diagonal entries are implicitly assumed to be 1.
-- `U`: The n x n ndarray upper-triangular portion of the LUP factorization.
+- `L`: The n x n ndarray lower-triangular portion of the LUP factorization. The diagonal entries are implicitly assumed to be 1. Unchanged by the algorithm.
+- `U`: The n x n ndarray upper-triangular portion of the LUP factorization. Unchanged by the algorithm.
 - `P`: An `Array` of length n containg the permutation
 - `b`: An ndarray of length n containing the righthand side of Ax = b
 - `work`: (optional) A vector used to permute the entries. If not provided, it is allocated and released into an `ndarray-scratch` typed vector pool.
 
 Returns `true` on successful completion; `false` otherwise.
+
+#### `require('ndarray-lup-solve')( LU, LU, P, b [, work] )`
+
+If the first two arguments are identical then it's understood that both L and U are stored in a single matrix with the diagonal entries of L (all unity) omitted. Usage and behavior is otherwise identical.
 
 
 ## Credits
