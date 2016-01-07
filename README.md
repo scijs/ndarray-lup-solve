@@ -14,17 +14,19 @@ Given an [LUP factorization](https://www.npmjs.com/package/ndarray-lup-factoriza
 var lup = require('ndarray-lup-factorization'),
     solve = require('ndarray-lup-solve'),
     ndarray = require('ndarray'),
-    pool = require('ndarray-pool')
+    pool = require('ndarray-scratch')
 
 var A = ndarray([2,1,1,0, 4,3,3,1, 8,7,9,5, 6,7,9,8], [4,4])
 var b = ndarray([13,38,102,107])
+var P = []
 
 // In-place LUP factorization:
+//   Note: repeated A tells it L and U are both stored in A
 lup(A, A, P)
 solve( A, A, P, b)
 
 // b now contains the answer x: [2,5,4,3]
-// A and P are unchanged and can be re-used
+// A and P are unchanged and can be re-used to solve another problem
 ```
 
 ## Usage
